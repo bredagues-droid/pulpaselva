@@ -1,7 +1,7 @@
 /*Aquí se personaliza todas las etiquetas HTML de las páginas*/
 * {
   margin: 0;
-  padding: 0%;
+  padding: 0;
 }
 /*AQUÍ OCULTO EL ÍCONO DE HAMBURGUESA*/
 #activadormenu{
@@ -60,6 +60,9 @@ padding: 30px;
   background-color: #3d14f3;          
   padding: 20px;
 }
+.publicidad img{
+  width: 100%;
+}
 
 /*AQUÍ VOY A PERSONALIZAR LA SECCIÓN DE CONTENIDO*/
 #contenido{
@@ -80,31 +83,22 @@ iframe{
 /*AQUÍ PERSONALIZO PRODUCTOS Y SERVICIOS*/
 #galeria{
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-content: center;
   padding: 20px;
 }
-.img-container{
-  width: 80%;
-  height: 100px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.prod-serv img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 .prod-serv{
   background-color: #F04D7E;
   max-width: 300px;
   padding: 10px;
   border-radius: 20px;
-}
-.publicidad img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  border-radius: 10px;
 }
 .prod-serv:hover{
   box-shadow: 0px 5px 10px #D3F314;
@@ -171,7 +165,6 @@ footer{
   text-align: center;
   padding: 80px;
 }
-
 /* AQUÍ VOY A HACER QUE LA PÁGINA SEA RESPONSIVO CON MEDIA QUERIES*/
 @media (max-width: 768px){
   /*AQUÍ MUESTRO EL BOTON HAMBURGUESA*/
@@ -185,7 +178,7 @@ footer{
     display: none;
     flex-direction: column;
     padding: 0px;
-    gap: 1px;
+    gap: 5px;
 }
 #menu a{
   display: flex;
